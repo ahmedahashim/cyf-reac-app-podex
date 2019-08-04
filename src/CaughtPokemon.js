@@ -1,11 +1,11 @@
-import React from 'react';
+import React, {Component} from 'react';
 
 
 
-const CaughtPokemon = (props) => {
-    
+class CaughtPokemon extends Component {
+    render(){
     return (
-        <p>Caught 0 Pokemon on{props.date}</p>
+        <p>Caught 0 Pokemon on{ this.props.date}</p>
     )
-}
+}}
 export default CaughtPokemon;
