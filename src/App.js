@@ -8,7 +8,7 @@ const logWhenClicked = () => {
 }
 
 function App() {
- 
+  
   return (
     <div>
       <Logo appName='Podex' onClickHandler={logWhenClicked}/>
