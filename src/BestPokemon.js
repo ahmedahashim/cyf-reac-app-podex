@@ -1,14 +1,16 @@
-import React from 'react';
-const BestPokemon = (props) => {
+import React, {Component} from 'react';
 
 
-    return (
+ class BestPokemon extends Component {
+    render() {
+        return (
+          
         <div>
             <p>My favourite Pokemon is</p>
             <ul>
-                {props.pokemonNames.map((name, index) =>
+                {this.props.pokemonNames.map((name, index) =>
                     <li key={index}>{name} </li>)}
             </ul>
         </div>)
-};
+}};
 export default BestPokemon
