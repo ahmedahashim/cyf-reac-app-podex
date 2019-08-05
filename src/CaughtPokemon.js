@@ -8,7 +8,9 @@ class CaughtPokemon extends Component {
         
         this.state= {
             caughtPokemon:0
+            
         }
+        console.log('constructor')
            }
     catchPokemon = () => {
         this.setState(previousState => {
@@ -18,9 +20,18 @@ class CaughtPokemon extends Component {
         })
 
     }
+    componentDidMount(){
+        console.log('componentDidMount')
+    }
+    componentDidUpdate(){
+        console.log('componentDidUpdate')
+    }
+    componentWillUnmount (){
+        console.log('componentWillUnmount')
+    }
     render(){
     return (
-        <div className="counter">        <p>Caug.ht {this.state.caughtPokemon} Pokemon on{ this.props.date}</p>
+        <div className="counter">        <p>Caught {this.state.caughtPokemon} Pokemon on{ this.props.date}</p>
             <button onClick={this.catchPokemon}>Count me</button>
         </div>
     )
